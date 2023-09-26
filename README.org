@@ -1,0 +1,26 @@
+#+TITLE: Python Unifi API wrapper  (pyunifi)
+* What
+A python wrapper for the unifi controller [[https://ubntwiki.com/products/software/unifi-controller/api][API]]
+
+More complete alternatives for php: https://github.com/Art-of-WiFi/UniFi-API-client/
+* Why
+Because it makes it much easier to write automations (e.g. do backups , add/delete/enable/disable FW/traffic rules).
+This can be used to better interface with e.g. home automation.
+* How
+** Requirements
+1. Unifi controller
+2. local admin user account on controller
+3. python
+4. poetry
+** How to install
+
+*** From source
+#+begin_src bash
+git clone <repourl> destdir
+cd destdir
+poetry install
+UNIFI_USER=<user> UNIFI_PASSWORD=<unifipwd> UNIFI_PASSWORD=<ip/host of controller> poetry run python controller-cli.py
+#+end_src
+
+*** pip wheel
+TODO
